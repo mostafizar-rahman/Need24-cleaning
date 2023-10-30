@@ -5,7 +5,8 @@ import Footer from "./Components/Footer/Footer";
 import "./scss/app.scss";
 import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
-import Portfolio from "./Components/Portfolio/Portfolio";
+import Projects from "./Components/Projects/Projects";
+import Teams from "./Components/Teams/Teams";
 const App = () => {
   return (
     <>
@@ -13,7 +14,8 @@ const App = () => {
       <Banner />
       <About/>
       <Services/>
-      <Portfolio/>
+      <Projects/>
+      <Teams/>
       <Footer />
     </>
   );
