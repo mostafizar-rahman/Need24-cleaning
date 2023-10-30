@@ -1,0 +1,12 @@
+.big__btn {
+  // border-b-[5px] border-b-primary font-semibold transition-all hover:border-b-main
+  background-color: transparent;
+  border: none;
+  border-bottom: 5px solid var(--primary-color);
+  font-size: 17px;
+  font-weight: 600;
+  transition: all 0.5s;
+  &:hover {
+    border-bottom: 5px solid var(--main-color);
+  }
+}

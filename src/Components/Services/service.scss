@@ -1,0 +1,65 @@
+.service {
+  &__container {
+    // max-w-6xl mx-auto px-3 py-24
+    max-width: 1152px;
+    margin: auto;
+    padding: 96px 12px;
+  }
+  &__wapper {
+    // grid md:grid-cols-2 gap-6 pt-8
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    @include breakpoint(md) {
+    }
+  }
+}
+
+.service__card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  background-color: var(--body-color);
+  &_left {
+    position: relative;
+    &::after {
+      transition: all 0.5s;
+      position: absolute;
+      left: 0;
+      top: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: transparent;
+    }
+    .img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .icon_wapper {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 56px;
+      height: 56px;
+      padding: 12px;
+      background-color: var(--main-color);
+      transition: all 0.5s;
+      .icon {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+  &:hover &_left::after {
+    background-color: rgba($color: #3d447e, $alpha: 0.3);
+  }
+  &:hover &_left .icon_wapper {
+    right: 50%;
+    bottom: 50%;
+    transform: translateX(50%);
+    transform: translateY(50%);
+  }
+}
+

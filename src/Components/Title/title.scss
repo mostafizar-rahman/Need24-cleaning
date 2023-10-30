@@ -1,0 +1,28 @@
+.title {
+  position: relative;
+  margin-bottom: 36px;
+  &__short {
+    // absolute md:-top-9 -top-5 lg:text-7xl md:text-6xl text-5xl  font-Roboto font-bold text-slate-200
+    position: absolute;
+    top: -20px;
+    font-size: 48px;
+    font-weight: 700;
+    font-family: "Roboto", sans-serif;
+    color: aliceblue;
+    @include breakpoint(md) {
+      top: -36px;
+      font-size: 60px;
+    }
+    @include breakpoint(lg) {
+      font-size: 72px;
+    }
+  }
+  &__long {
+    // absolute  text-primary  inline-block text-2xl font-Roboto
+    position: absolute;
+    color: var(--primary-color);
+    display: inline-block;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+  }
+}

@@ -1,0 +1,52 @@
+.header {
+  // max-w-6xl mx-auto px-3 flex justify-between items-center py-3 lg:py-0
+  max-width: 1152px;
+  margin: auto;
+  padding: 12px;
+  @include justify();
+  // @include breakpoint()
+  &__logo {
+    // text-2xl font-bold flex items-center
+
+    font-size: 24px;
+    font-weight: 700;
+    @include flex();
+    span {
+      color: var(--primary-color);
+    }
+  }
+  &__menu__dextop {
+    display: block;
+    @include breakpoint(max-lg) {
+      display: none;
+    }
+  }
+  &__menu__mobile {
+    display: none;
+    @include breakpoint(max-lg) {
+      // transition-all top-0 min-w-[300px] h-full  bg-gray-200 text-black
+      display: block;
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      min-width: 300px;
+      height: 100%;
+      background-color: var(--body-color);
+      font-weight: 800;
+      transition: all 0.5s;
+    }
+  }
+  .right__side{
+    @include flex();
+    gap: 17px;
+  }
+  &__menu_icon {
+    display: block;
+    @include breakpoint(lg) {
+      display: none;
+    }
+    .icon{
+        font-size: 24px;
+    }
+  }
+}

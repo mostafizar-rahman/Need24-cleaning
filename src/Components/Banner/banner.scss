@@ -1,0 +1,47 @@
+.banner {
+  position: relative;
+  background-color: var(--body-color);
+  height: calc(100vh - 100px);
+  &__wapper {
+    max-width: 1152px;
+    height: 100%;
+    margin: auto;
+    padding: 0 12px;
+    @include flex();
+    // max-w-xl absolute z-10 px-2 py-2 bg-gray-200 bg-opacity-50
+  }
+  &__content {
+    max-width: 576px;
+    position: absolute;
+    z-index: 10;
+    padding: 8px;
+    background-color: var(--body-color);
+    opacity: 0.5;
+    h5 {
+      font-size: 18px;
+      font-weight: 600;
+    }
+    h1 {
+      font-size: 48px;
+      font-weight: 500;
+    }
+    p {
+      margin-top: 16px;
+      font-size: 17px;
+      letter-spacing: 2px;
+    }
+  }
+  &__imageBox {
+    // absolute  right-0 top-0 h-full  lg:w-[600px] md:w-[480px] sm:w-[360px] w-[270px]
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 600px;
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

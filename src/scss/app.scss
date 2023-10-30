@@ -1,0 +1,17 @@
+@import "./base/typography.scss";
+
+@import "./abstracts/varibables.scss";
+
+@import "./abstracts/mixins.scss";
+
+@import "./abstracts/buttons.scss";
+
+// ------------ Components
+@import "../Components/Title/title.scss";
+@import "../Components/Banner/banner.scss";
+@import "../Components/Footer/footer.scss";
+@import "../Components/Header/header.scss";
+@import "../Components/Header/menu.scss";
+@import "../Components/About/about.scss";
+@import "../Components/Services/service.scss";
+@import "../Components/Portfolio/portfolio.scss"

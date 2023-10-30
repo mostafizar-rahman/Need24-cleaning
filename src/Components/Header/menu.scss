@@ -1,0 +1,38 @@
+.menu__close_icon{
+    // lg:hidden block absolute right-[12px] top-[12px] py-2
+
+    display: block;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    padding: 8px 0;
+    @include breakpoint(lg) {
+        display: none;
+    }
+}
+.menu__list {
+
+  // flex flex-col lg:flex-row lg:items-center items-start lg:space-x-12 space-x-0 p-5 lg:p-0 leading-[50px] lg:leading-none mt-6 lg:mt-0
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  line-height: 50px;
+  margin-top: 24px;
+  @include breakpoint(lg) {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+    line-height: 0;
+    margin-top: 0;
+  }
+  &__item{
+    // font-semibold text-lg hover:text-primary transition-all py-5 inline-block
+    font-weight: 600;
+    font-size: 20px;
+    padding: 20px;
+    display: inline-block;
+    &:hover{
+        color: var(--primary-color);
+    }
+  }
+}
