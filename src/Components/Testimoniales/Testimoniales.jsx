@@ -24,7 +24,7 @@ const Testimoniales = () => {
     prevArrow: <SamplePrevArrow centerArrow={false} />,
   };
   return (
-    <section className="testimonial">
+    <section className="testimonial" name="/testimoinal">
       <div className="container">
         <Slider {...settings}>
           {reviewList.map(({ id, image, name, review }) => (

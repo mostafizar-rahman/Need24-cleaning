@@ -6,7 +6,7 @@ import Service from "./Service";
 
 const Services = () => {
   return (
-    <section className="service">
+    <section className="service" name="/services">
       <div className="container">
         <Title shortTitle="SERVICE" longTitle="We are dadicated" />
         <div className="service__wapper">

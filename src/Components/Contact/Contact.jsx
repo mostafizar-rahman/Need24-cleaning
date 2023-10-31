@@ -26,9 +26,10 @@ const contactList = [
 ];
 const Contact = () => {
   return (
-    <section className="contact">
+    <section className="contact" name="/contact">
       <div className="container">
         <Title shortTitle={"CONTACT"} longTitle={"Have you any problem"} />
+        {/* -------------Left side info */}
         <div className=" contact__wapper">
           <motion.div
             className=""
@@ -52,6 +53,7 @@ const Contact = () => {
             })}
           </motion.div>
 
+          {/* ----------------------- Right side from */}
           <motion.div
             className="contact__right"
             initial={{ opacity: 0, translateY: 100 }}
@@ -62,9 +64,7 @@ const Contact = () => {
             <form>
               <div className="contact__right_form">
                 <div className="input_box">
-                  <label htmlFor="name" className="text-secondary">
-                    Name
-                  </label>
+                  <label htmlFor="name">Name</label>
                   <input
                     name="name"
                     type="text"
@@ -74,26 +74,20 @@ const Contact = () => {
                   />
                 </div>
                 <div className="input_box">
-                  <label htmlFor="email" className="text-secondary">
-                    Email
-                  </label>
+                  <label htmlFor="email">Email</label>
                   <input
                     name="email"
                     type="email"
                     id="email"
                     placeholder="Email"
-                    className="border bg-gray-50 text-secondary rounded-sm px-4 py-2 outline-none focus:outline-none w-full "
                   />
                 </div>
                 <div className="textarea_box">
-                  <label htmlFor="message" className="text-secondary">
-                    Message
-                  </label>
+                  <label htmlFor="message">Message</label>
                   <textarea
                     name="message"
                     placeholder="Message"
                     id="message"
-                    className="border bg-gray-50 text-secondary rounded-sm px-4 py-2 outline-none w-full min-h-[170px]"
                   ></textarea>
                 </div>
               </div>

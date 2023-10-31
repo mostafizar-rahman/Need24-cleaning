@@ -6,7 +6,7 @@ import groceries from "../../assets/icons/groceries.png";
 import Title from "../Title/Title";
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" name="/about">
       <div className="container">
         <div className="about__wapper">
           <motion.div

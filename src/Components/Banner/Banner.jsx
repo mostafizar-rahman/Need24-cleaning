@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import bg1 from "../../assets/images/bg-1.jpg";
 const Banner = () => {
   return (
-    <section className="banner">
+    <section className="banner" name="/home">
       <motion.div
         className="banner__wapper"
         initial={{ opacity: 0, translateY: 100 }}

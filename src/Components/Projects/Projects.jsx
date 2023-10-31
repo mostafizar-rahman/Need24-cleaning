@@ -5,7 +5,7 @@ import Title from "../Title/Title";
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" name="/projects">
       <div className="container">
         <Title shortTitle="PORTFOLIO" longTitle="Our Recent Projects" />
         <div className="projects__gallery pt-8">

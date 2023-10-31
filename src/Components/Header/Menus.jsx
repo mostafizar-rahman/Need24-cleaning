@@ -1,10 +1,18 @@
 import React from "react";
 import { FaTimes } from "react-icons/fa";
+import {
+  Link,
+  Button,
+  Element,
+  Events,
+  animateScroll as scroll,
+  scrollSpy,
+} from "react-scroll";
 
 const menuList = [
   {
     id: 1,
-    path: "/",
+    path: "/home",
     name: "Home",
   },
   {
@@ -19,7 +27,7 @@ const menuList = [
   },
   {
     id: 8,
-    path: "/",
+    path: "/projects",
     name: "Projects",
   },
   {
@@ -45,25 +53,28 @@ const menuList = [
   },
 ];
 const Menus = ({ handleMenuHide }) => {
-  const pathname = "/";
-
   return (
     <div>
       {/* --------- Close icon */}
       <div className=" menu__close_icon " onClick={handleMenuHide}>
-        <FaTimes className="text-2xl cursor-pointer" />
+        <FaTimes />
       </div>
       {/* -----------Menus */}
       <ul className="menu__list">
         {menuList.map(({ id, name, path }) => {
           return (
             <li key={id}>
-              <a
-                href={path}
-                className={` ${pathname === "/" && "text-primary"} `}
+              <Link
+                onClick={() => handleMenuHide(true)}
+                activeClass="active_item"
+                to={path}
+                spy={true}
+                smooth={true}
+                offset={0}
+                duration={500}
               >
                 {name}
-              </a>
+              </Link>
             </li>
           );
         })}

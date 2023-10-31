@@ -1,10 +1,12 @@
 .header {
-  // max-w-6xl mx-auto px-3 flex justify-between items-center py-3 lg:py-0
-  max-width: 1152px;
-  margin: auto;
-  padding: 12px;
-  @include justify();
-  // @include breakpoint()
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--white-color);
+  .container {
+    padding: 20px 12px;
+    @include justify();
+  }
   &__logo {
     font-size: 24px;
     font-weight: 700;
@@ -46,6 +48,7 @@
   }
   &__menu_icon {
     display: block;
+    cursor: pointer;
     @include breakpoint(lg) {
       display: none;
     }

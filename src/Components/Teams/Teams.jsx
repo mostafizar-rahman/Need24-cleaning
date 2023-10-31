@@ -5,7 +5,7 @@ import Team from "./Team";
 
 const Teams = () => {
   return (
-    <section className="temas">
+    <section className="temas" name="/teams">
       <div className="container">
         <Title longTitle={"We are here"} shortTitle={"TEAMS"} />
         <div className="temas__wapper">

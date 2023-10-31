@@ -5,7 +5,7 @@ import Title from "../Title/Title";
 
 const Pricing = () => {
   return (
-    <section className="price">
+    <section className="price" name="/price">
       <div className="container">
         <Title shortTitle="PRICING" longTitle="We are dadicated" />
         <div className="price__wapper">
