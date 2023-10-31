@@ -1,12 +1,4 @@
 .about {
-
-  &__container {
-    position: relative;
-    max-width: 1152px;
-    width: 100%;
-    margin: auto;
-    padding: 96px 12px;
-  }
   &__wapper {
     display: grid;
     grid-template-columns: 1;
@@ -37,7 +29,7 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-color: var(--body-color);
+    background-color: var(--white-color);
     width: 160px;
     height: 130px;
     padding: 12px;
@@ -62,18 +54,23 @@
     }
   }
   &__right_side {
-    margin-bottom: 0;
+    margin-top: 0px;
     order: 0;
     @include breakpoint(md) {
+      margin-top: 28px;
       order: 1;
-      margin-bottom: 10px;
     }
 
     .para {
-      font-weight: 500;
+      font-weight: 400;
       font-size: 17px;
       color: var(--secondary-color);
-      margin-top: 25px;
+      &:first-child{
+        margin-top: 55px;
+      }
+      &:last-child{
+        margin-top: 30px;
+      }
     }
     .features {
       display: flex;
@@ -110,6 +107,7 @@
           font-weight: 700;
           font-family: "Roboto", sans-serif;
           font-size: 17px;
+          color: var(--secondary-color);
           @include breakpoint(sm) {
             font-size: 20px;
           }

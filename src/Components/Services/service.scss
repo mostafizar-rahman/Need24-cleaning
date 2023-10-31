@@ -38,6 +38,7 @@
     }
     .icon_wapper {
       position: absolute;
+      z-index: 100;
       right: 0;
       bottom: 0;
       width: 56px;
@@ -52,7 +53,7 @@
     }
   }
   &:hover &_img_box::after {
-    background-color: rgba($color: #3d447e, $alpha: 0.3);
+    background-color: rgba($color: #cdd2f9, $alpha: 0.3);
   }
   &:hover &_img_box .icon_wapper {
     right: 50%;
@@ -63,9 +64,9 @@
 
   // ------------ Content
   &_content {
-    // padding: px;
+    padding: 8px;
+    
     h3 {
-      //  font-semibold font-Roboto text-main transition-all hover:text-primary
       font-size: 19px;
       font-weight: 600;
       font-family: "Roboto", sans-serif;
@@ -77,23 +78,25 @@
         font-size: 22px;
       }
     }
-  }
-  p {
-    font-size: 15px;
-    margin-top: 5px;
-    color: var(--secondary-color);
-  }
-  .btn {
-    color: var(--primary-color);
-    @include flex();
-    gap: 5px;
-    margin-top: 8px;
-    font-family: "Roboto", sans-serif;
-    cursor: pointer;
-    transition: all 0.5s;
-    &:hover {
-      color: var(--main-color);
-      gap: 11px;
+
+    p {
+      font-size: 15px;
+      margin-top: 7px;
+      color: var(--secondary-color);
+    }
+    .btn {
+      font-weight: 500;
+      color: var(--primary-color);
+      @include flex();
+      gap: 5px;
+      margin-top: 16px;
+      font-family: "Roboto", sans-serif;
+      cursor: pointer;
+      transition: all 0.5s;
+      &:hover {
+        color: var(--main-color);
+        gap: 11px;
+      }
     }
   }
 }

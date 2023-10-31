@@ -43,7 +43,7 @@ const Price = ({price, features, plan}) => {
                   <AiOutlineClose className="close" />
                 )}
               </p>
-              <p>{featureName}</p>
+              <small>{featureName}</small>
             </div>
           );
         })}

@@ -7,7 +7,7 @@ import Title from "../Title/Title";
 const About = () => {
   return (
     <section className="about">
-      <div className="about__container">
+      <div className="container">
         <div className="about__wapper">
           <motion.div
             initial={{ opacity: 0, translateY: 100 }}

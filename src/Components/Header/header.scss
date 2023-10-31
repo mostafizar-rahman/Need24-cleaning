@@ -34,11 +34,11 @@
       transition: all 0.5s;
     }
   }
-  .active_menu {
-    display: block;
+  .menu_active {
+    right: 0%;
   }
-  .dActive_menu {
-    display: none;
+  .menu_d_active {
+    right: -100%;
   }
   .right__side {
     @include flex();

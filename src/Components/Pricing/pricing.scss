@@ -14,12 +14,10 @@
     padding: 40px 32px;
     background-color: var(--body-color);
     .card_title {
-      // text-secondary text-xl font-semibold
       font-size: 20px;
       font-weight: 600;
     }
     .sub_title {
-      // text-sm text-[#9193a8] font-medium  inline-block
       font-size: 14px;
       color: var(--secondary-color);
     }
@@ -45,17 +43,19 @@
       margin-top: 37px;
     }
     .features {
-      margin-top: 32px;
-      h4{
-        font-size: 18px;
-        // margin-bottom: 10px;
+      margin-top: 30px;
+      h4 {
+        font-size: 20px;
+        margin-bottom: 7px;
       }
     }
     .features__item {
       @include flex();
       gap: 10px;
-      padding: 9px 0;
-     
+      padding: 10px 0;
+      small {
+        font-size: 15px;
+      }
       .icon_wapper {
         width: 20px;
         height: 20px;
@@ -63,13 +63,13 @@
         background-color: rgba(193, 192, 192, 0.3);
         @include center();
         padding: 2px;
-        .check{
-            color: #0051ff;
-            font-size: 15px;
+        .check {
+          color: #0051ff;
+          font-size: 15px;
         }
-        .close{
-            color: red;
-            font-size: 15px;
+        .close {
+          color: red;
+          font-size: 15px;
         }
       }
     }

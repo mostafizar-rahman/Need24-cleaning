@@ -14,7 +14,7 @@
     position: absolute;
     z-index: 10;
     padding: 8px;
-    background-color: var(--body-color)/75;
+    background-color: var(--body-color) / 75;
     z-index: 10;
     h5 {
       font-size: 18px;
@@ -22,16 +22,25 @@
       color: var(--primary-color);
     }
     h1 {
-      font-size: 48px;
+      font-size: 30px;
       font-weight: 500;
       color: var(--black-color);
+      @include breakpoint(sm) {
+        font-size: 40px;
+      }
+      @include breakpoint(md) {
+        font-size: 48px;
+      }
     }
     p {
       margin-top: 16px;
-      font-size: 17px;
+      font-size: 15px;
       letter-spacing: 2px;
       line-height: 25px;
       color: var(--secondary-color);
+      @include breakpoint(sm) {
+        font-size: 17px;
+      }
     }
   }
   &__imageBox {

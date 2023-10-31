@@ -103,7 +103,7 @@ const Footer = () => {
               {links.map(({ id, items, title }) => {
                 return (
                   <div key={id}>
-                    <p className="font-semibold text-lg text-gray-50">
+                    <p className="heading">
                       {title}
                     </p>
 
@@ -126,13 +126,13 @@ const Footer = () => {
               })}
 
               <div className="office__info">
-                <p className="font-semibold text-lg text-gray-50">
+                <p className="heading">
                   Office Info
                 </p>
 
-                <ul className="mt-6 space-y-4 text-sm">
-                  <li className="flex items-start space-x-3">
-                    <img src={map} alt="" className="w-4 mt-1" />
+                <ul>
+                  <li>
+                    <img src={map} alt="" />
                     <p className="text-gray-400">
                       Lalmonirhat
                       <br />
@@ -140,13 +140,13 @@ const Footer = () => {
                     </p>
                   </li>
 
-                  <li className="flex items-start space-x-3">
-                    <img src={email} alt="" className="w-4 mt-1" />
+                  <li>
+                    <img src={email} alt="" />
                     <p className="text-gray-400">dev.mostafizar@gamil.com</p>
                   </li>
 
-                  <li className="flex items-start space-x-3">
-                    <img src={call} alt="" className="w-4 mt-1" />
+                  <li>
+                    <img src={call} alt="" />
                     <p className="text-gray-400">+88 01575699193</p>
                   </li>
                 </ul>

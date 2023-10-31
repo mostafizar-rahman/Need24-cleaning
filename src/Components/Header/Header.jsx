@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import Menus from "./Menus";
 
+
 const Header = () => {
   const [isMenuShow, setIsMenuShow] = useState(false);
-  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   const handleMenuShow = () => {
     setIsMenuShow(true);
@@ -12,10 +12,6 @@ const Header = () => {
   const handleMenuHide = () => {
     setIsMenuShow(false);
   };
-
-  function handleopenModal() {
-    setModalIsOpen(true);
-  }
 
   return (
     <header className="header ">
@@ -29,7 +25,7 @@ const Header = () => {
       {/* ------- Menu for small divices */}
       <nav
         className={`header__menu__mobile  
-         ${isMenuShow ? "active_menu" : "dActive_menu"}
+         ${isMenuShow ? "menu_active" : "menu_d_active"}
           `}
       >
         <Menus handleMenuHide={handleMenuHide} />
@@ -42,9 +38,7 @@ const Header = () => {
         </nav>
 
         {/* ---------- Booking button and menu icon */}
-        <button className="big__btn" onClick={handleopenModal}>
-          Book Service
-        </button>
+        <button className="big__btn">Book Service</button>
         <div className=" header__menu_icon" onClick={handleMenuShow}>
           <FaBars className="icon" />
         </div>

@@ -2,15 +2,14 @@
   position: relative;
   margin-bottom: 36px;
   &__short {
-    // absolute md:-top-9 -top-5 lg:text-7xl md:text-6xl text-5xl  font-Roboto font-bold text-slate-200
     position: absolute;
     top: -20px;
     font-size: 48px;
     font-weight: 700;
     font-family: "Roboto", sans-serif;
-    color: aliceblue;
+    color: var(--gray-color);
     @include breakpoint(md) {
-      top: -36px;
+      top: -40px;
       font-size: 60px;
     }
     @include breakpoint(lg) {
@@ -18,7 +17,6 @@
     }
   }
   &__long {
-    // absolute  text-primary  inline-block text-2xl font-Roboto
     position: absolute;
     color: var(--primary-color);
     display: inline-block;
