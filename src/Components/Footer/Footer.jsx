@@ -107,13 +107,12 @@ const Footer = () => {
                       {title}
                     </p>
 
-                    <ul className="mt-6 space-y-4 text-sm">
+                    <ul>
                       {items.map(({ id, link }) => {
                         return (
                           <li key={id}>
                             <a
                               href=""
-                              className="text-gray-400 transition hover:opacity-75"
                             >
                               {link}
                             </a>
@@ -133,7 +132,7 @@ const Footer = () => {
                 <ul>
                   <li>
                     <img src={map} alt="" />
-                    <p className="text-gray-400">
+                    <p>
                       Lalmonirhat
                       <br />
                       Bangladesh
@@ -142,12 +141,12 @@ const Footer = () => {
 
                   <li>
                     <img src={email} alt="" />
-                    <p className="text-gray-400">dev.mostafizar@gamil.com</p>
+                    <p>dev.mostafizar@gamil.com</p>
                   </li>
 
                   <li>
                     <img src={call} alt="" />
-                    <p className="text-gray-400">+88 01575699193</p>
+                    <p>+88 01575699193</p>
                   </li>
                 </ul>
               </div>

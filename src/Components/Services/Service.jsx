@@ -24,10 +24,10 @@ const Service = ({ image, icons, title, id }) => {
           Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
           dolores, illum earum vero aut veritatis.
         </p>
-        <div className="mt-3">
+        <div>
           <div className="btn">
             <span>Read More</span>{" "}
-            <HiOutlineArrowRight className="group-hover:ml-3 transition-all" />
+            <HiOutlineArrowRight />
           </div>
         </div>
       </div>

@@ -25,7 +25,7 @@ const Price = ({price, features, plan}) => {
           <sub>/per month</sub>
         </h1>
       </div>
-      <div className="mt-10">
+      <div>
         <a href='' className="btn">
           Choose {plan}
         </a>

@@ -42,7 +42,7 @@
         font-size: 20px;
         transition: all 0.5s;
         &:hover {
-          color: var(--gray-color);
+          color: var(--secondary-color);
         }
       }
     }
@@ -73,6 +73,10 @@
         font-size: 14px;
         padding: 9px 0;
         display: inline-block;
+        transition: all 0.5s;
+        &:hover{
+          color: var(--secondary-color);
+        }
       }
       .office__info {
         li {
