@@ -5,10 +5,10 @@ import Team from "./Team";
 
 const Teams = () => {
   return (
-    <section className=" bg-gray-100">
-      <div className="max-w-6xl mx-auto  py-24 px-3">
+    <section className="temas">
+      <div className="container">
         <Title longTitle={"We are here"} shortTitle={"TEAMS"} />
-        <div className="grid lg:grid-cols-4 sm:grid-cols-2 gap-4">
+        <div className="temas__wapper">
           {teamsList.map(({ id, image, name }) => (
             <Team key={id} name={name} image={image} />
           ))}

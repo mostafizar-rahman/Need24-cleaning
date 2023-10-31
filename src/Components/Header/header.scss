@@ -6,8 +6,6 @@
   @include justify();
   // @include breakpoint()
   &__logo {
-    // text-2xl font-bold flex items-center
-
     font-size: 24px;
     font-weight: 700;
     @include flex();
@@ -24,11 +22,11 @@
   &__menu__mobile {
     display: none;
     @include breakpoint(max-lg) {
-      // transition-all top-0 min-w-[300px] h-full  bg-gray-200 text-black
       display: block;
       position: fixed;
       z-index: 50;
       top: 0;
+      right: 0;
       min-width: 300px;
       height: 100%;
       background-color: var(--body-color);
@@ -36,7 +34,13 @@
       transition: all 0.5s;
     }
   }
-  .right__side{
+  .active_menu {
+    display: block;
+  }
+  .dActive_menu {
+    display: none;
+  }
+  .right__side {
     @include flex();
     gap: 17px;
   }
@@ -45,8 +49,8 @@
     @include breakpoint(lg) {
       display: none;
     }
-    .icon{
-        font-size: 24px;
+    .icon {
+      font-size: 24px;
     }
   }
 }

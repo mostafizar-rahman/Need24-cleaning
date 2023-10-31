@@ -6,7 +6,7 @@ import Title from "../Title/Title";
 const Projects = () => {
   return (
     <section className="projects">
-      <div className="projects__container">
+      <div className="container">
         <Title shortTitle="PORTFOLIO" longTitle="Our Recent Projects" />
         <div className="projects__gallery pt-8">
           {servicesList.map(({ id, discretion, image, title, isLarge }) => (

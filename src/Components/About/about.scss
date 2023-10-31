@@ -1,5 +1,5 @@
 .about {
-  background-color: var(--body-color);
+
   &__container {
     position: relative;
     max-width: 1152px;
@@ -9,8 +9,12 @@
   }
   &__wapper {
     display: grid;
+    grid-template-columns: 1;
+    gap: 40px;
+    @include breakpoint(md){
     grid-template-columns: 40% auto;
-    gap: 10px;
+
+    }
   }
   &__left_side {
     position: relative;
@@ -58,9 +62,11 @@
     }
   }
   &__right_side {
+    margin-bottom: 0;
     order: 0;
     @include breakpoint(md) {
       order: 1;
+      margin-bottom: 10px;
     }
 
     .para {
@@ -73,6 +79,7 @@
       display: flex;
       justify-content: space-between;
       flex-direction: column;
+      gap: 20px;
       margin-top: 20px;
       @include breakpoint(sm) {
         flex-direction: row;

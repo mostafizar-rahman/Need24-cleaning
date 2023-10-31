@@ -1,14 +1,12 @@
 .service {
-  &__container {
-    // max-w-6xl mx-auto px-3 py-24
-    max-width: 1152px;
-    margin: auto;
-    padding: 96px 12px;
-  }
+  background-color: var(--body-color);
+  margin-top: 50px;
   &__wapper {
-    // grid md:grid-cols-2 gap-6 pt-8
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    @include breakpoint(sm) {
+      grid-template-columns: 1fr 1fr;
+    }
     gap: 24px;
     @include breakpoint(md) {
     }
@@ -19,8 +17,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 8px;
-  background-color: var(--body-color);
-  &_left {
+  background-color: var(--white-color);
+  // --------- style image and icon
+  &_img_box {
     position: relative;
     &::after {
       transition: all 0.5s;
@@ -52,14 +51,49 @@
       }
     }
   }
-  &:hover &_left::after {
+  &:hover &_img_box::after {
     background-color: rgba($color: #3d447e, $alpha: 0.3);
   }
-  &:hover &_left .icon_wapper {
+  &:hover &_img_box .icon_wapper {
     right: 50%;
     bottom: 50%;
     transform: translateX(50%);
     transform: translateY(50%);
   }
-}
 
+  // ------------ Content
+  &_content {
+    // padding: px;
+    h3 {
+      //  font-semibold font-Roboto text-main transition-all hover:text-primary
+      font-size: 19px;
+      font-weight: 600;
+      font-family: "Roboto", sans-serif;
+      @include breakpoint(md) {
+        font-size: 20px;
+      }
+
+      @include breakpoint(lg) {
+        font-size: 22px;
+      }
+    }
+  }
+  p {
+    font-size: 15px;
+    margin-top: 5px;
+    color: var(--secondary-color);
+  }
+  .btn {
+    color: var(--primary-color);
+    @include flex();
+    gap: 5px;
+    margin-top: 8px;
+    font-family: "Roboto", sans-serif;
+    cursor: pointer;
+    transition: all 0.5s;
+    &:hover {
+      color: var(--main-color);
+      gap: 11px;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import {FaBars, } from "react-icons/fa"
+import { FaBars } from "react-icons/fa";
 import Menus from "./Menus";
 
 const Header = () => {
@@ -18,40 +18,38 @@ const Header = () => {
   }
 
   return (
-    <>
-      <div className="header ">
-        <h1>
-          <a href={""} className=" header__logo ">
-            <small> NEED</small>
-            <span>24</span>
-          </a>
-        </h1>
+    <header className="header ">
+      <h1>
+        <a href={""} className=" header__logo ">
+          <small> NEED</small>
+          <span>24</span>
+        </a>
+      </h1>
 
+      {/* ------- Menu for small divices */}
+      <nav
+        className={`header__menu__mobile  
+         ${isMenuShow ? "active_menu" : "dActive_menu"}
+          `}
+      >
+        <Menus handleMenuHide={handleMenuHide} />
+      </nav>
+
+      <div className="right__side">
+        {/* ---------desktop Menu */}
         <nav className={`header__menu__dextop `}>
           <Menus handleMenuHide={handleMenuHide} />
         </nav>
-        {/* ------- Menu for small divices */}
-        <nav
-          className={`header__menu__mobile fixed  
-         
-          `}
-        >
-          <Menus handleMenuHide={handleMenuHide} />
-        </nav>
-        <div className="right__side">
-          <button
-            className="big__btn"
-            onClick={handleopenModal}
-          >
-            Book Service
-          </button>
-          <div className=" header__menu_icon" onClick={handleMenuShow}>
-            <FaBars className="icon" />
-          </div>
+
+        {/* ---------- Booking button and menu icon */}
+        <button className="big__btn" onClick={handleopenModal}>
+          Book Service
+        </button>
+        <div className=" header__menu_icon" onClick={handleMenuShow}>
+          <FaBars className="icon" />
         </div>
       </div>
-      {/* <Modal modalIsOpen={modalIsOpen} setModalIsOpen={setModalIsOpen} /> */}
-    </>
+    </header>
   );
 };
 

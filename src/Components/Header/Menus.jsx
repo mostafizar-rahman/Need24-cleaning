@@ -9,38 +9,39 @@ const menuList = [
   },
   {
     id: 2,
-    path: "/",
+    path: "/about",
     name: "About",
   },
   {
     id: 3,
-    path: "/",
+    path: "/services",
     name: "Services",
-  },
-  {
-    id: 4,
-    path: "/",
-    name: "Price",
-  },
-  {
-    id: 5,
-    path: "/",
-    name: "Teams",
-  },
-  {
-    id: 6,
-    path: "/",
-    name: "Testimoinal",
-  },
-  {
-    id: 7,
-    path: "/",
-    name: "Contact",
   },
   {
     id: 8,
     path: "/",
-    name: "Home",
+    name: "Projects",
+  },
+  {
+    id: 5,
+    path: "/teams",
+    name: "Teams",
+  },
+  {
+    id: 4,
+    path: "/price",
+    name: "Price",
+  },
+
+  {
+    id: 6,
+    path: "/testimoinal",
+    name: "Testimoinal",
+  },
+  {
+    id: 7,
+    path: "/contact",
+    name: "Contact",
   },
 ];
 const Menus = ({ handleMenuHide }) => {
@@ -49,10 +50,7 @@ const Menus = ({ handleMenuHide }) => {
   return (
     <div>
       {/* --------- Close icon */}
-      <div
-        className=" menu__close_icon "
-        onClick={handleMenuHide}
-      >
+      <div className=" menu__close_icon " onClick={handleMenuHide}>
         <FaTimes className="text-2xl cursor-pointer" />
       </div>
       {/* -----------Menus */}

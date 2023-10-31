@@ -7,6 +7,9 @@ import About from "./Components/About/About";
 import Services from "./Components/Services/Services";
 import Projects from "./Components/Projects/Projects";
 import Teams from "./Components/Teams/Teams";
+import Contact from "./Components/Contact/Contact";
+import Testimoniales from "./Components/Testimoniales/Testimoniales";
+import Pricing from "./Components/Pricing/Pricing";
 const App = () => {
   return (
     <>
@@ -16,6 +19,9 @@ const App = () => {
       <Services/>
       <Projects/>
       <Teams/>
+      <Pricing/>
+      <Testimoniales/>
+      <Contact/>
       <Footer />
     </>
   );

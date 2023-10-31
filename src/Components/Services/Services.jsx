@@ -7,7 +7,7 @@ import Service from "./Service";
 const Services = () => {
   return (
     <section className="service">
-      <div className="service__container">
+      <div className="container">
         <Title shortTitle="SERVICE" longTitle="We are dadicated" />
         <div className="service__wapper">
           {servicesList.map(({ id, icons, discretion, image, title }) => (

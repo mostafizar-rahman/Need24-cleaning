@@ -8,27 +8,30 @@
     margin: auto;
     padding: 0 12px;
     @include flex();
-    // max-w-xl absolute z-10 px-2 py-2 bg-gray-200 bg-opacity-50
   }
   &__content {
     max-width: 576px;
     position: absolute;
     z-index: 10;
     padding: 8px;
-    background-color: var(--body-color);
-    opacity: 0.5;
+    background-color: var(--body-color)/75;
+    z-index: 10;
     h5 {
       font-size: 18px;
       font-weight: 600;
+      color: var(--primary-color);
     }
     h1 {
       font-size: 48px;
       font-weight: 500;
+      color: var(--black-color);
     }
     p {
       margin-top: 16px;
       font-size: 17px;
       letter-spacing: 2px;
+      line-height: 25px;
+      color: var(--secondary-color);
     }
   }
   &__imageBox {
@@ -37,7 +40,20 @@
     right: 0;
     top: 0;
     height: 100%;
-    width: 600px;
+    width: 270px;
+
+    @include breakpoint(sm) {
+      width: 360px;
+    }
+
+    @include breakpoint(md) {
+      width: 480px;
+    }
+
+    @include breakpoint(lg) {
+      width: 600px;
+    }
+
     img {
       object-fit: cover;
       width: 100%;

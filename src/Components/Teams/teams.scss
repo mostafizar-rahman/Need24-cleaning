@@ -1,0 +1,66 @@
+.temas {
+  background-color: var(--body-color);
+  margin-top: 50px;
+  &__wapper {
+    // grid lg:grid-cols-4 sm:grid-cols-2 gap-4
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    @include breakpoint(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include breakpoint(md) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  &__card {
+    position: relative;
+    border: 1px solid var(--main-color);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    &_footer {
+      // team transition-all text-white group-hover:bg-white group-hover:text-black
+      clip-path: polygon(0 30%, 100% 0%, 100% 100%, 0% 100%);
+      width: 100%;
+      height: 112px;
+      background-color: var(--main-color);
+      opacity: 0.9;
+      position: absolute;
+      bottom: 0;
+      @include flex();
+      transition: all 0.5s;
+      color: var(--white-color);
+    }
+    &_info {
+      margin-top: 20px;
+      margin-left: 15px;
+    }
+    &_icons {
+      position: absolute;
+      right: 0px;
+      top: 15%;
+      width: 20px;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.5s;
+      li {
+        background-color: var(--white-color);
+        width: 28px;
+        height: 28px;
+        color: #000;
+        @include center();
+      }
+    }
+    &:hover &_icons {
+      right: 8px;
+      opacity: 1;
+    }
+    b {
+      font-size: 17px;
+      margin-top: 20px;
+    }
+  }
+}

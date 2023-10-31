@@ -1,0 +1,75 @@
+.testimonial {
+  background: linear-gradient(
+      48deg,
+      rgba(3, 0, 20, 0.67) 0%,
+      rgba(3, 0, 20, 0.67) 89%,
+      rgba(3, 0, 20, 0.67) 100%
+    ),
+    url("src/assets/images/bg-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  &__card {
+    @include center();
+    flex-direction: column;
+    gap: 0;
+    @include breakpoint(md) {
+      flex-direction: row;
+      gap: 20px;
+    }
+    &_content {
+      position: relative;
+      background-color: rgba(64, 64, 64, 0.3);
+      max-width: 672px;
+      width: 100%;
+      color: var(--white-color);
+      padding: 25px;
+      border-radius: 3px;
+      min-height: 330px;
+      @include breakpoint(sm) {
+        min-height: 270px;
+      }
+      .icon {
+        // text-7xl absolute text-black
+        position: absolute;
+        font-size: 54px;
+        color: var(--black-color);
+      }
+      .review {
+        position: absolute;
+      }
+      @include breakpoint(sm) {
+        i {
+          font-size: 17px;
+          line-height: 24px;
+        }
+      }
+      i {
+        font-size: 15px;
+        line-height: 22px;
+        letter-spacing: 1px;
+      }
+      b {
+        font-size: 20px;
+        margin-top: 18px;
+        display: inline-block;
+      }
+    }
+    &_img {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      margin-top: 15px;
+      object-fit: cover;
+      @include breakpoint(md) {
+        width: 160px;
+        height: 290px;
+        border-radius: 150px;
+        margin-top: 0px;
+
+      }
+    }
+    // md:w-[160px] md:h-[290px] h-[140px] w-[140px] mt-5 md:mt-0
+  }
+}
